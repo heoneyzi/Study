@@ -4,13 +4,6 @@
 
 > **Question —** Can video-SALMONN 2+ link a sound to the action happening when it is heard, and if not, is the failure in vision, audio, or timing?
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-DAVE는 부엌 1인칭 영상의 특정 행동 순간에 효과음(사이렌, 아기 울음 등)을 덧입히고, "그 소리가 날 때 사람이 무엇을 하고 있나?"를 묻는 벤치마크입니다. 영상과 소리를 모두 이해해야 풀 수 있고, 영상만·소리만·텍스트만·시간 순서 등 6개의 진단 과제로 약점을 쪼개 봅니다. video-SALMONN 2+ 3B로 50개 샘플을 평가했더니 핵심 과제인 소리-행동 정렬 정확도는 46%(무작위 20%)였습니다. 소리 자체를 맞히는 과제는 68%였지만 행동의 시간 순서는 10%에 그쳤습니다. 특히 '해당 없음'이 정답인 9문항에서 모델은 한 번도 '해당 없음'을 고르지 않고 늘 어떤 행동을 골랐습니다. 없는 연결을 지어내는 환각과 같은 모습입니다. 표본이 작은 파일럿이므로 논문의 공식 수치와 직접 비교할 수는 없습니다.
-
-</details>
-
 | | |
 |---|---|
 | **Status** | ✅ Done (May 2026, from file timestamps) |

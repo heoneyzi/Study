@@ -4,13 +4,6 @@
 
 Every row of the Notion database *저널클럽 논문 제안* (11 proposals, with who wanted to read each), plus a candidate table, a reading roadmap and a one-line memo. ✅ = chosen and read together.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-저널클럽에서 함께 읽을 논문을 고르기 위해 팀원들이 올린 제안 11건과, 그 밖의 후보 표·로드맵·메모를 모았습니다. 각 제안에는 선정 이유와 핵심 내용이 짧게 정리되어 있고, 실제로 선택된 4편(✅)은 저널클럽 세션으로 이어졌습니다. 저는 약물 처리 후 세포 이미지와 유전자 발현을 함께 담은 scGeneScope 벤치마크를 제안했는데, 이후 시즌 2의 Virtual Cell 문제와 신약 발굴 주제로 이어지는 관심사였습니다. 메뉴판을 함께 고르는 과정처럼, 누가 무엇을 읽고 싶어 했는지가 팀의 관심 흐름을 보여 줍니다.
-
-</details>
-
 ## 🗳️ Proposals
 
 | Paper | Proposed by | Week | Read together |

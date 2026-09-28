@@ -4,13 +4,6 @@
 
 > **Question —** When an audio-visual LLM answers a hallucination-probing question, how much of each generated token's attention goes to video, audio and text-prompt tokens? And does that look different when it hallucinates?
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-AVHBench의 영상 12개(원본/불일치 대조 6쌍), 질문 33개에 대해 video-SALMONN 2+ 7B가 답을 만들 때 생성 토큰마다 영상·오디오·텍스트 중 어디에 어텐션을 주는지 기록한 파일럿입니다. 소리·물체 존재 여부를 묻는 단일 모달리티 질문은 17개 중 15개를 맞혔습니다. 반면 영상과 소리가 서로 맞는지 묻는 질문은 10개 중 5개만 맞혔고, 불일치 쌍 6개 중 4개를 '일치한다'고 답했습니다. 이 네 경우 모두 'Yes'를 말하는 순간의 어텐션은 대부분 질문 텍스트에 있었고, 영상 어텐션은 뒤이어 물체 이름을 말할 때에야 올라갔습니다. 다만 정답을 맞힌 경우에도 텍스트 쏠림이 보여 환각 판별 신호라고 보기는 어렵고, 표본이 작아 경향만 보여 줍니다.
-
-</details>
-
 | | |
 |---|---|
 | **Status** | ✅ Pilot done (Mar 2026); full analysis in [note 22](../../05_audio_visual/03_video_salmonn2plus_first_results.md) |

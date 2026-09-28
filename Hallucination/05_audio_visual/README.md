@@ -4,13 +4,6 @@
 
 The pivot from image–text models to models that watch and listen. It starts with a dissection of AVCD (NeurIPS 2025) and a hands-on setup of video-SALMONN 2+. An attention analysis on AVHBench (65 plots) follows, then a survey of video and audio hallucination papers and the design of a temporal audio–video benchmark. The notes are in Korean. The code for these runs is in [experiments/](../experiments/README.md).
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-비전에서 벗어나 영상과 소리를 함께 다루는 오디오-비주얼 LLM의 환각을 다룬 3단계 노트입니다. AVCD 논문을 뜯어보며 언어 어텐션이 영상·오디오보다 지배적일 때 환각 가능성이 높다는 가정과 계산 비용(4번의 추론, 여러 하이퍼파라미터)을 짚었습니다. video-SALMONN 2+를 직접 세팅해 AVHBench 문항에서 레이어·토큰별로 영상/오디오/텍스트 어텐션을 기록했습니다. 서로 맞지 않는 영상-소리 쌍 6개 중 4개를 '일치한다'고 답하는 환각도 관찰했습니다. 이후 관련 논문과 데이터셋을 조사하고, 소리와 장면의 시간적 일치를 묻는 벤치마크를 설계해 보았습니다.
-
-</details>
-
 | # | Note | What it covers | Date |
 |---|---|---|---|
 | 20 | [Video–audio LLM hallucination](01_video_audio_llm_hallucination.md) | Why move beyond vision; AVCD dissected and critiqued; AV benchmarks (MUSIC-AVQA, AVHBench); audio-LLM decoding (AAD) | 2026-01 |

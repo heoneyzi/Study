@@ -4,13 +4,6 @@
 
 Five sessions that asked whether DNA "language" models understand regulation — from a field survey to Evo 2 and AlphaGenome. Paper proposals live in [proposals/](proposals/README.md); meeting recaps in [meetings/](../meetings/README.md).
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-매주 한 편씩 유전체 언어 모델(gLM) 관련 논문을 읽고 토론한 기록입니다. 1주차 서베이로 전체 지형(아키텍처·토크나이저·사전학습·평가)을 잡고, 2주차에는 제가 "사전학습된 gLM 표현이 원-핫 인코딩보다 정말 나은가"를 검증한 논문을 발표했습니다. 3주차는 강화학습으로 세포 특이적 DNA 조절 서열을 설계하는 Ctrl-DNA, 4·5주차는 Evo 2와 AlphaGenome을 다뤘습니다. 외국어 사전을 통째로 외운 것(gLM)과 그 언어로 실제 대화를 잘하는 것(세포별 조절 예측)은 다르다는 점이 반복해서 확인되었습니다. 🤖 표시가 있는 하위 페이지는 팀원이 참고용으로 붙여 둔 AI 답변입니다.
-
-</details>
-
 ## 🗓️ Sessions
 
 | Week | Paper | Notes by | Session | Notes · recap |

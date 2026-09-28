@@ -15,13 +15,6 @@
 > [!TIP]
 > **TL;DR** — 69 curated notes from the YAI Functional Genomics study team. **Season 1** (Jan – Apr 2026) went from protein-function prediction (CAFA 6, team Bronze Medal) to a journal club on genome language models; its last meeting proposed the layer-by-layer Evo 2 analysis that became **GDTR**. **Season 2** (Jul 2026 –, which I lead) turned to single-cell Perturbation biology and the **Virtual Cell Challenge 2026**.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-이 폴더는 YAI Functional Genomics 스터디 팀이 두 시즌 동안 남긴 노트 69개를 한곳에 모은 것입니다. 시즌 1(2026년 1–4월)은 단백질 서열로 기능을 맞히는 CAFA 6 대회에서 시작해, DNA를 문장처럼 읽는 유전체 언어 모델(gLM) 논문을 매주 함께 읽는 저널클럽으로 이어졌고, 마지막 회의에서 나온 "Evo 2를 층(layer)별로 들여다보자"는 아이디어가 GDTR 논문으로 발전했습니다. 시즌 2(2026년 7월–)는 제가 팀장을 맡아, 세포의 유전자 하나를 끄는 Perturbation을 가했을 때 세포 전체의 유전자 발현이 어떻게 바뀌는지 예측하는 Virtual Cell Challenge 2026에 도전하고 있습니다. 비유하자면 DNA가 요리책일 때, 시즌 1은 "AI가 요리책의 문장을 얼마나 이해하는가"를, 시즌 2는 "레시피 한 줄을 지우면 완성된 요리가 어떻게 달라지는가"를 공부한 셈입니다. 노트는 원문(한국어) 그대로 두고 각 노트 위에 작성자·날짜·출처를 표시했으며, 중복 페이지는 하나로 합치고 개인정보·예산·비밀번호가 보이는 캡처는 뺐습니다. 생물학 배경이 없다면 아래 "Start here" 순서대로 읽기를 권합니다.
-
-</details>
-
 | | |
 |---|---|
 | **Period** | Season 1: Jan – Apr 2026 · Season 2: Jul 2026 – ongoing |

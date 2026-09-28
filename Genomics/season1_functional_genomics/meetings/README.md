@@ -4,13 +4,6 @@
 
 The team's meeting log from kick-off to the 11th meeting, plus the midterm report. Most long recaps were produced by an AI meeting note-taker and are flagged 🤖 inside each note.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-시즌 1의 회의록 모음입니다. 킥오프에서 CAFA 6 참가를 정하고 역할을 나눈 뒤, 중간보고서에서 "센트럴 도그마 → CAFA 6 → 저널클럽 → 유전자 수준 챌린지"라는 4단계 계획을 세웠습니다. 저널클럽 회차별 토론 요약과, Evo 2를 층별로 분석해 보자는 아이디어가 처음 나온 11차 회의가 특히 중요합니다. 긴 요약문은 AI 회의록 도구가 만든 것이라 이름·숫자에 받아쓰기 오류가 있을 수 있어 노트마다 표시했습니다. 참석자 이름과 소속이 보이는 화상회의 캡처, 회의 링크 비밀번호가 보이는 채팅 캡처, 사진만 있는 10차 회의는 공개본에서 제외했습니다.
-
-</details>
-
 | # | Date | Format | Topic | Note |
 |---|---|---|---|---|
 | 1 | 2026-01-17 | in person | Kick-off: single-cell and central-dogma basics; enter CAFA 6 first | [1차](01_meeting01_2026-01-17.md) |

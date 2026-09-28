@@ -4,13 +4,6 @@
 
 The YAI Functional Genomics team's first season: learn the central dogma, get hands-on with CAFA 6, then read the genome-language-model literature together — ending with the question that became GDTR.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-시즌 1은 다섯 명이 센트럴 도그마를 함께 공부하는 것에서 시작했습니다. 먼저 단백질 서열만 보고 그 단백질의 기능(GO term)을 맞히는 CAFA 6 대회에 참가해 바이오 데이터와 파이프라인을 빠르게 경험했고, 팀은 Bronze Medal을 받았습니다. 이후 DNA를 문장처럼 읽는 유전체 언어 모델 논문을 매주 한 편씩 읽는 저널클럽을 열었고, 저는 2주차에 "사전학습된 DNA 언어 모델의 표현이 정말 쓸모 있는가"를 발표했습니다. 책을 많이 읽은 사람이 곧바로 요리를 잘하지는 못하듯, 거대한 gLM도 세포 특이적인 조절 예측에서는 단순한 모델을 크게 넘지 못한다는 것이 공통된 결론이었습니다. 마지막 회의에서 나온 "모델 안을 층별로 들여다보자"는 아이디어가 YAICON 프로젝트와 GDTR 논문으로 이어졌습니다.
-
-</details>
-
 | | |
 |---|---|
 | **Period** | 2026-01-17 (kick-off) → 2026-04 (11th meeting) |

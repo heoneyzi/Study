@@ -4,13 +4,6 @@
 
 The season I lead: from AI-driven drug discovery to single-cell Perturbation prediction, organised around the Virtual Cell Challenge 2026.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-시즌 2는 제가 팀장을 맡은 여섯 명의 팀으로, 세포에 약물이나 유전자 억제(CRISPRi) 같은 Perturbation을 가했을 때 세포 전체의 유전자 발현이 어떻게 변하는지를 예측하는 문제에 집중합니다. 첫 세션에서 제가 AI 기반 신약 개발 흐름(Lab-in-the-Loop, PhenoCompass)을 소개했고, 팀원들이 파운데이션 모델의 한계, 최적수송 기반 약물 반응 모델, VCC 2025 수상작 분석을 이어서 발표했습니다. 이후 Virtual Cell Challenge 2026에 참가해, 한 번도 본 적 없는 세포주의 대조군 세포만 보고 300개 유전자 억제 결과를 맞히는 제로샷 과제에 팀원별로 다른 방법을 시도했습니다. 처음 가 보는 도시의 날씨를 비슷한 도시들의 기록으로 추정하는 것처럼, 이미 측정된 다른 세포주의 반응을 잘 옮겨 오는 것이 점수의 대부분을 만든다는 것이 지금까지의 결론입니다. 이 관점을 정리하기 위해 ICML 2026 논문을 리뷰했고, 대회의 최종 순위는 팀 기록 기준 10월 22일 공개되는 테스트셋으로 정해집니다.
-
-</details>
-
 | | |
 |---|---|
 | **Period** | 2026-07-28 (first session) → ongoing (VCC 2026 test set: 2026-10-22, per team notes) |

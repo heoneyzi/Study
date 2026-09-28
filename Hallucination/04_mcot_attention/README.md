@@ -4,13 +4,6 @@
 
 After the team phase, Jiheon surveyed two families of tools: multimodal chain-of-thought (MCoT) methods that make a model look again, and attention interventions that change where it looks. He also listed the benchmarks that would count as evidence. The notes are in Korean.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-1단계 이후 방법론을 넓게 조사한 노트입니다. 'MCoT 후보'에는 모델이 이미지를 다시 보게 만드는 추론·프롬프팅 기법 10가지(MARINE, VAR, Blueprint Debate, DetToolChain, Visual Sketchpad 등)를 모았습니다. 이 중 VAR(attention sink) 정리는 뉴스레터 #125와 같은 주제입니다. 'AttentionMap 후보'에서는 어텐션 조작 논문 16편을 코드 공개 여부와 학습 필요 여부로 분류했습니다. 'MLLM Hallucination Benchmark'에는 POPE, AMBER, HallusionBench 등 12개 벤치마크의 특징과 쓰임새를 정리했습니다.
-
-</details>
-
 | # | Note | What it covers | Date |
 |---|---|---|---|
 | 16 | [MCoT overview](01_mcot_overview.md) | Entry page: MCoT dataset/benchmark table and links | 2025-09 |

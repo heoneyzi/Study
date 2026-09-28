@@ -18,13 +18,6 @@
 > [!TIP]
 > **TL;DR** — About a year of study on why multimodal LLMs hallucinate, moving from attention-based fixes for object hallucination in image–text models (a May–Jun 2025 team project with Heejae Yang) to audio-visual LLMs. The folder holds 26 study notes in Korean (a survey, 3 paper reviews, meeting logs and Jiheon's own method ideas) plus two pilot experiments on video-SALMONN 2+. On 12 AVHBench videos the model called 4 of 6 mismatched audio–video pairs "matching". On 50 DAVE samples it scored 46 % on audio-visual alignment (chance 20 %), and on the 9 items whose answer was "none of the above" it never once chose that option.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-멀티모달 LLM이 이미지·영상·소리에 없는 내용을 지어내는 할루시네이션(환각)을 약 1년 동안 파고든 스터디 기록입니다. 2025년 5–6월에는 팀원 양희재와 CVPR 제출을 목표로 LVLM의 객체 환각을 다뤘습니다. 어텐션이 배경 토큰에 쏠리는 문제(DAMRO)와 언어 사전지식(language prior)에 기대는 문제(AGLA 등)를 정리했고, 사람처럼 객체 단위로 훑어보도록 Segment 기반으로 어텐션을 재분배하는 아이디어를 직접 제안했습니다. 이후 Multimodal CoT·어텐션 조작 기법·환각 벤치마크를 조사했고, 2026년에는 오디오-비주얼 LLM으로 넘어가 AVCD(NeurIPS 2025)를 분석한 뒤 video-SALMONN 2+로 직접 실험했습니다. AVHBench 파일럿에서는 모델이 답을 고르는 순간 영상·소리보다 질문 텍스트에 훨씬 많은 어텐션을 주는 모습을 시각화했습니다. DAVE 50문항 평가에서는 '해당 없음'이 정답인 9문항에서 모델이 한 번도 '해당 없음'을 고르지 않았습니다. 비유하자면, 그림을 보지 않고 문제 문장만 읽고 그럴듯한 답을 찍는 학생을 관찰한 셈입니다. 노트는 원문(한국어) 그대로 두고, 읽는 순서와 요약을 이 README에 정리했습니다.
-
-</details>
-
 | | |
 |---|---|
 | **Period** | May 2025 – May 2026 (dated from note screenshots and script timestamps) |

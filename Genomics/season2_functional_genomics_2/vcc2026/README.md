@@ -4,13 +4,6 @@
 
 Arc Institute's Virtual Cell Challenge 2026 gives only the unperturbed control cells of three unseen cell lines and asks how each of 300 CRISPRi knockdowns changes all 18,533 genes (300 × 400 cells × 3 contexts = 360,000 predicted cells). These are the team's working notes; my code and experiments are in [01_Medical/VCC_2026](https://github.com/heoneyzi/Medical/blob/main/VCC_2026/README.md).
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-VCC 2026은 처음 보는 세포주 세 개의 "아무것도 하지 않은" 대조군 세포만 주고, 유전자 300개를 각각 CRISPRi로 억제했을 때 세포 1만 8천여 개 유전자의 발현이 어떻게 바뀔지 예측하게 하는 제로샷 대회입니다. 이 폴더에는 팀원별 데이터셋 조사, 제가 정리한 필수 데이터셋 지도와 frozen-baseline 분석, 정유민의 검색(retrieval) 기반 KIMCHI 파이프라인 기록, 김민석의 CCLE·Chronos 전이, 김서진의 Stack 실험이 담겨 있습니다. 처음 가 보는 도시의 날씨를 비슷한 도시들의 관측 기록을 옮겨 와 예측하듯, 이미 다른 세포주에서 측정된 반응을 잘 옮기는 것이 점수의 대부분을 만든다는 것이 공통된 관찰입니다. 대회가 아직 진행 중이라 리더보드 숫자는 모두 검증(validation) 단계의 스냅샷입니다.
-
-</details>
-
 | Key number | Value | Scope · source |
 |---|---|---|
 | Validation targets already measured in Replogle K562 genome-wide | **272 / 300 (91 %)** | 정유민's day-1 log · [PROGRESS](08b_progress_day1.md) |

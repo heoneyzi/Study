@@ -4,13 +4,6 @@
 
 Weekly FG2 sessions and the two VCC 2026 team meetings. Summaries were produced by an AI meeting note-taker (flagged 🤖); my own prepared notes for the first session are included as well.
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-시즌 2의 주간 세션과 VCC 2026 팀 회의 기록입니다. 1주차에는 제가 AI 기반 신약 개발 흐름(Lab-in-the-Loop)과 세포 이미지·화합물 구조를 한 공간에 정렬하는 PhenoCompass를 소개했고, 이어서 파운데이션 모델의 한계(PCA가 이기기도 한다), 약물 반응을 최적수송으로 모델링하는 방법, VCC 2025 수상작과 평가 지표의 허점을 다뤘습니다. 요리 대회로 치면, 작년 우승 레시피와 심사 기준표를 먼저 분석한 뒤 올해 대회 전략을 세운 셈입니다. 요약문은 AI 회의록 도구가 만든 것이라 오류가 있을 수 있으며, 예산·업체 견적·학회 내부 논의 부분은 공개본에서 제외했습니다.
-
-</details>
-
 | Week | Date | Topic | Presenter(s) | Note |
 |---|---|---|---|---|
 | 1 | 2026-07-28 | AI for drug discovery: Lab-in-the-Loop, PhenoCompass, TranscriptFormer | **강지헌 (me)**, 정유민 | [summary](01_fg_overview1_drug_discovery_2026-07-28.md) · [my slide notes](01a_lab_in_the_loop_slide_notes.md) |

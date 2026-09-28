@@ -4,13 +4,6 @@
 
 Kick-off planning and each member's CAFA 6 route. CAFA 6 asks for a protein's Gene Ontology functions from its amino-acid sequence alone; the team finished with a **Bronze Medal**. The full project write-up and code are in [01_Medical/CAFA6](https://github.com/heoneyzi/Medical/blob/main/CAFA6/README.md).
 
-<details>
-<summary><b>🇰🇷 한국어 요약</b></summary>
-
-CAFA 6는 단백질의 아미노산 서열만 보고 그 단백질이 하는 일(GO term)을 맞히는 국제 대회입니다. 이 폴더에는 킥오프 때의 방향 논의와 후보 대회 비교, 그리고 팀원별 시도(유민: 공개 솔루션·GOA 조사, 윤진: ESM-C 임베딩과 GO 그래프 GCN, 수빈: JEPA, 지헌: ProtT5 임베딩과 데이터셋 정리)가 담겨 있습니다. 비유하자면 처음 보는 사람의 이력서(서열)만 보고 직업(기능)을 여러 개 맞히는 문제인데, 직업 분류표가 트리 구조라 "외과의"라면 "의사"도 함께 맞혀야 합니다. 대회 전체 정리와 코드는 01_Medical/CAFA6 폴더에 있습니다.
-
-</details>
-
 ## 👥 Who tried what
 
 | Member | Route | Source |
