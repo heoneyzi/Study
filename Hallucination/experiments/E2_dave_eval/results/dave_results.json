@@ -1,0 +1,2745 @@
+{
+  "model_path": "tsinghua-ee/video-SALMONN2_plus_3B_full",
+  "split": "epic",
+  "num_samples": 50,
+  "seed": 0,
+  "accuracy": {
+    "audio_visual_alignment": 0.46,
+    "visual_only": 0.34,
+    "audio_only": 0.26,
+    "text_only": 0.12,
+    "temporal_ordering": 0.1,
+    "action_recognition": 0.5,
+    "audio_classification": 0.68
+  },
+  "correct": {
+    "audio_visual_alignment": 23,
+    "visual_only": 17,
+    "audio_only": 13,
+    "text_only": 6,
+    "temporal_ordering": 5,
+    "action_recognition": 24,
+    "audio_classification": 34
+  },
+  "total": {
+    "audio_visual_alignment": 50,
+    "visual_only": 50,
+    "audio_only": 50,
+    "text_only": 50,
+    "temporal_ordering": 50,
+    "action_recognition": 48,
+    "audio_classification": 50
+  },
+  "elapsed_sec": 1674.9616644382477,
+  "per_sample": [
+    {
+      "audio_class": "siren",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when siren is heard?\n\n(A) wash the pot\n(B) put the pot back\n(C) put the fried egg inside the plate\n(D) put it on desk\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) put the pot back\n(B) put the fried egg inside the plate\n(C) put it on desk\n(D) wash the pot\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) put it on desk\n(B) wash the pot\n(C) put the fried egg inside the plate\n(D) put the pot back\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: put it on desk, put the fried egg inside the plate, put the pot back, wash the pot\nWhich action is most likely associated with the sound 'siren'?\n\n(A) put it on desk\n(B) put the pot back\n(C) wash the pot\n(D) put the fried egg inside the plate\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) put the fried egg inside the plate\n(B) put it on desk\n(C) put the pot back\n(D) wash the pot\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(C)', '(D)', '(B)']",
+          "ground_truth": [
+            "(B)",
+            "(A)",
+            "(C)",
+            "(D)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) put the pot back\n(B) put the fried egg inside the plate\n(C) put it on desk\n(D) wash the pot\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": [
+            1
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) siren\n(B) sneezing\n(C) coughing\n(D) car horn\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "coughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when coughing is heard?\n\n(A) take saucepan\n(B) put plate\n(C) close microwave\n(D) transfer food from saucepan onto plate\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) put plate\n(B) transfer food from saucepan onto plate\n(C) close microwave\n(D) take saucepan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) take saucepan\n(B) transfer food from saucepan onto plate\n(C) put plate\n(D) close microwave\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: put plate, close microwave, take saucepan, transfer food from saucepan onto plate\nWhich action is most likely associated with the sound 'coughing'?\n\n(A) transfer food from saucepan onto plate\n(B) take saucepan\n(C) put plate\n(D) close microwave\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) take saucepan\n(B) transfer food from saucepan onto plate\n(C) put plate\n(D) close microwave\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(C)', '(B)', '(D)']",
+          "ground_truth": [
+            "(C)",
+            "(D)",
+            "(A)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) put plate\n(B) close microwave\n(C) take saucepan\n(D) transfer food from saucepan onto plate\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": [
+            3
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) sneezing\n(B) coughing\n(C) crying baby\n(D) dog\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "church_bells",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when church_bells is heard?\n\n(A) second time: stir courgette\n(B) adjust hob\n(C) first time: stir courgette\n(D) stir onions\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) adjust hob\n(B) first time: stir courgette\n(C) second time: stir courgette\n(D) stir onions\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) adjust hob\n(B) second time: stir courgette\n(C) stir onions\n(D) first time: stir courgette\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: stir courgette, stir onions, adjust hob, stir courgette\nWhich action is most likely associated with the sound 'church_bells'?\n\n(A) adjust hob\n(B) stir onions\n(C) first time: stir courgette\n(D) second time: stir courgette\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) stir onions\n(B) adjust hob\n(C) first time: stir courgette\n(D) second time: stir courgette\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(C)', '(B)', '(D)']",
+          "ground_truth": [
+            "(C)",
+            "(A)",
+            "(B)",
+            "(D)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) stir onions\n(B) stir courgette\n(C) stir courgette\n(D) adjust hob\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1,
+            2
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) church bells\n(C) dog\n(D) siren\n\nAnswer only with the letter.",
+          "prediction": "B.",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "chainsaw",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when chainsaw is heard?\n\n(A) check knob\n(B) pick up hob grill\n(C) put down burner cap\n(D) wipe hob\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) check knob\n(B) pick up hob grill\n(C) wipe hob\n(D) put down burner cap\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) wipe hob\n(B) pick up hob grill\n(C) put down burner cap\n(D) check knob\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: put down burner cap, wipe hob, check knob, pick up hob grill\nWhich action is most likely associated with the sound 'chainsaw'?\n\n(A) put down burner cap\n(B) check knob\n(C) pick up hob grill\n(D) wipe hob\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) check knob\n(B) wipe hob\n(C) pick up hob grill\n(D) put down burner cap\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(B)', '(C)', '(D)']",
+          "ground_truth": [
+            "(D)",
+            "(B)",
+            "(A)",
+            "(C)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) wipe hob\n(B) pick up hob grill\n(C) check knob\n(D) put down burner cap\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": [
+            0
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clapping\n(B) siren\n(C) chainsaw\n(D) crow\n\nAnswer only with the letter.",
+          "prediction": "C.",
+          "ground_truth": 2,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crow",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crow is heard?\n\n(A) first time: mix dough\n(B) second time: mix dough\n(C) first time: pour water into bowl\n(D) second time: pour water into bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) first time: mix dough\n(B) second time: mix dough\n(C) second time: pour water into bowl\n(D) first time: pour water into bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) second time: mix dough\n(B) first time: pour water into bowl\n(C) second time: pour water into bowl\n(D) first time: mix dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: pour water into bowl, mix dough, pour water into bowl, mix dough\nWhich action is most likely associated with the sound 'crow'?\n\n(A) second time: mix dough\n(B) second time: pour water into bowl\n(C) first time: mix dough\n(D) first time: pour water into bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) first time: pour water into bowl\n(B) first time: mix dough\n(C) second time: pour water into bowl\n(D) second time: mix dough\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(B)', '(C)', '(D)']",
+          "ground_truth": [
+            "(A)",
+            "(B)",
+            "(C)",
+            "(D)"
+          ],
+          "correct": true
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) mix dough\n(B) pour water into bowl\n(C) mix dough\n(D) pour water into bowl\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            0,
+            2
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) sneezing\n(B) laughing\n(C) crow\n(D) dog\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 2,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "clock_alarm",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when clock_alarm is heard?\n\n(A) first time: turn on hob\n(B) second time: turn on hob\n(C) move pan\n(D) move pot\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) move pan\n(B) first time: turn on hob\n(C) second time: turn on hob\n(D) move pot\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) move pan\n(B) move pot\n(C) first time: turn on hob\n(D) second time: turn on hob\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: turn on hob, move pot, move pan, turn on hob\nWhich action is most likely associated with the sound 'clock_alarm'?\n\n(A) second time: turn on hob\n(B) move pan\n(C) first time: turn on hob\n(D) move pot\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) second time: turn on hob\n(B) move pan\n(C) move pot\n(D) first time: turn on hob\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(A)', '(C)', '(B)']",
+          "ground_truth": [
+            "(D)",
+            "(C)",
+            "(B)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) move pan\n(B) turn on hob\n(C) move pot\n(D) turn on hob\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1,
+            3
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clapping\n(B) crow\n(C) clock alarm\n(D) dog\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crying_baby",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crying_baby is heard?\n\n(A) lather cutting board\n(B) rinse cutting board\n(C) rinse knife\n(D) open tap\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) open tap\n(B) rinse knife\n(C) rinse cutting board\n(D) lather cutting board\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) rinse cutting board\n(B) open tap\n(C) rinse knife\n(D) lather cutting board\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: lather cutting board, open tap, rinse cutting board, rinse knife\nWhich action is most likely associated with the sound 'crying_baby'?\n\n(A) lather cutting board\n(B) rinse knife\n(C) rinse cutting board\n(D) open tap\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) rinse cutting board\n(B) lather cutting board\n(C) open tap\n(D) rinse knife\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(B)', '(A)', '(D)']",
+          "ground_truth": [
+            "(B)",
+            "(C)",
+            "(A)",
+            "(D)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) open tap\n(B) rinse cutting board\n(C) lather cutting board\n(D) rinse knife\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": [
+            1
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) cat\n(B) crying baby\n(C) crow\n(D) dog\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "clock_alarm",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when clock_alarm is heard?\n\n(A) grab some small piece of lettuce\n(B) mix the lettuce\n(C) put them back\n(D) wash with tap water\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) wash with tap water\n(B) put them back\n(C) grab some small piece of lettuce\n(D) mix the lettuce\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) put them back\n(B) wash with tap water\n(C) mix the lettuce\n(D) grab some small piece of lettuce\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: grab some small piece of lettuce, wash with tap water, put them back, mix the lettuce\nWhich action is most likely associated with the sound 'clock_alarm'?\n\n(A) mix the lettuce\n(B) put them back\n(C) grab some small piece of lettuce\n(D) wash with tap water\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) grab some small piece of lettuce\n(B) mix the lettuce\n(C) wash with tap water\n(D) put them back\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(B)', '(C)', '(D)']",
+          "ground_truth": [
+            "(A)",
+            "(C)",
+            "(D)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) wash with tap water\n(B) put them back\n(C) mix the lettuce\n(D) grab some small piece of lettuce\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": [
+            2
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clapping\n(B) laughing\n(C) clock alarm\n(D) chainsaw\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crow",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crow is heard?\n\n(A) mix the mixture\n(B) mix the bell pepper\n(C) pour some pepper\n(D) put back the pepper shaker\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) put back the pepper shaker\n(B) pour some pepper\n(C) mix the bell pepper\n(D) mix the mixture\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) put back the pepper shaker\n(B) mix the mixture\n(C) pour some pepper\n(D) mix the bell pepper\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: mix the bell pepper, pour some pepper, put back the pepper shaker, mix the mixture\nWhich action is most likely associated with the sound 'crow'?\n\n(A) mix the bell pepper\n(B) put back the pepper shaker\n(C) pour some pepper\n(D) mix the mixture\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) mix the bell pepper\n(B) mix the mixture\n(C) pour some pepper\n(D) put back the pepper shaker\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(A)', '(B)', '(D)']",
+          "ground_truth": [
+            "(A)",
+            "(C)",
+            "(D)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) mix the mixture\n(B) put back the pepper shaker\n(C) mix the bell pepper\n(D) pour some pepper\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            0
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) crow\n(C) cat\n(D) church bells\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "coughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when coughing is heard?\n\n(A) put down saucepan lid onto countertop\n(B) adjust heat on stove\n(C) stir meat in saucepan using spoon\n(D) stir meat using spoon in saucepan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) adjust heat on stove\n(B) stir meat in saucepan using spoon\n(C) stir meat using spoon in saucepan\n(D) put down saucepan lid onto countertop\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) adjust heat on stove\n(B) stir meat using spoon in saucepan\n(C) stir meat in saucepan using spoon\n(D) put down saucepan lid onto countertop\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C.",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: stir meat in saucepan using spoon, put down saucepan lid onto countertop, adjust heat on stove, stir meat using spoon in saucepan\nWhich action is most likely associated with the sound 'coughing'?\n\n(A) adjust heat on stove\n(B) put down saucepan lid onto countertop\n(C) stir meat in saucepan using spoon\n(D) stir meat using spoon in saucepan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "E",
+          "ground_truth": 4,
+          "correct": true
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) adjust heat on stove\n(B) stir meat in saucepan using spoon\n(C) stir meat using spoon in saucepan\n(D) put down saucepan lid onto countertop\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(B)', '(D)', '(A)']",
+          "ground_truth": [
+            "(B)",
+            "(D)",
+            "(A)",
+            "(C)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) stir meat in saucepan using spoon\n(B) adjust heat on stove\n(C) stir meat using spoon in saucepan\n(D) put down saucepan lid onto countertop\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": [
+            0
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) siren\n(B) church bells\n(C) coughing\n(D) crow\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 2,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "church_bells",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when church_bells is heard?\n\n(A) press chicken\n(B) grab container\n(C) put chicken onto plate\n(D) put/pour broccoli on plate\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) put/pour broccoli on plate\n(B) put chicken onto plate\n(C) press chicken\n(D) grab container\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) put/pour broccoli on plate\n(B) put chicken onto plate\n(C) grab container\n(D) press chicken\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: grab container, put/pour broccoli on plate, put chicken onto plate, press chicken\nWhich action is most likely associated with the sound 'church_bells'?\n\n(A) press chicken\n(B) grab container\n(C) put/pour broccoli on plate\n(D) put chicken onto plate\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) put chicken onto plate\n(B) put/pour broccoli on plate\n(C) grab container\n(D) press chicken\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(A)', '(B)', '(D)']",
+          "ground_truth": [
+            "(C)",
+            "(B)",
+            "(A)",
+            "(D)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) put/pour broccoli on plate\n(B) press chicken\n(C) grab container\n(D) put chicken onto plate\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": [
+            0
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clapping\n(B) cat\n(C) dog\n(D) church bells\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 3,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "dog",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when dog is heard?\n\n(A) close oil bottle\n(B) pour oil on meat\n(C) dry hands\n(D) take oil bottle\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) close oil bottle\n(B) pour oil on meat\n(C) dry hands\n(D) take oil bottle\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) dry hands\n(B) pour oil on meat\n(C) take oil bottle\n(D) close oil bottle\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: dry hands, take oil bottle, pour oil on meat, close oil bottle\nWhich action is most likely associated with the sound 'dog'?\n\n(A) close oil bottle\n(B) pour oil on meat\n(C) take oil bottle\n(D) dry hands\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) take oil bottle\n(B) pour oil on meat\n(C) dry hands\n(D) close oil bottle\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(B)', '(C)', '(D)']",
+          "ground_truth": [
+            "(C)",
+            "(A)",
+            "(B)",
+            "(D)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) take oil bottle\n(B) dry hands\n(C) close oil bottle\n(D) pour oil on meat\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": [
+            3
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) dog\n(B) car horn\n(C) coughing\n(D) crow\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crying_baby",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crying_baby is heard?\n\n(A) throw away plastic bits\n(B) flip the oats\n(C) start defrosting\n(D) press the oats in pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) throw away plastic bits\n(B) press the oats in pan\n(C) flip the oats\n(D) start defrosting\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) flip the oats\n(B) throw away plastic bits\n(C) start defrosting\n(D) press the oats in pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: throw away plastic bits, flip the oats, press the oats in pan, start defrosting\nWhich action is most likely associated with the sound 'crying_baby'?\n\n(A) flip the oats\n(B) press the oats in pan\n(C) start defrosting\n(D) throw away plastic bits\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) flip the oats\n(B) throw away plastic bits\n(C) start defrosting\n(D) press the oats in pan\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(A)', '(B)', '(C)']",
+          "ground_truth": [
+            "(B)",
+            "(A)",
+            "(D)",
+            "(C)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) flip the oats\n(B) throw away plastic bits\n(C) start defrosting\n(D) press the oats in pan\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": [
+            0
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) coughing\n(C) car horn\n(D) siren\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "clock_alarm",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when clock_alarm is heard?\n\n(A) rinse baking pan\n(B) put down baking pan\n(C) open tap\n(D) wash baking pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) rinse baking pan\n(B) wash baking pan\n(C) open tap\n(D) put down baking pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) wash baking pan\n(B) open tap\n(C) rinse baking pan\n(D) put down baking pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: wash baking pan, open tap, rinse baking pan, put down baking pan\nWhich action is most likely associated with the sound 'clock_alarm'?\n\n(A) put down baking pan\n(B) wash baking pan\n(C) open tap\n(D) rinse baking pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) put down baking pan\n(B) rinse baking pan\n(C) wash baking pan\n(D) open tap\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(C)', '(B)', '(A)']",
+          "ground_truth": [
+            "(C)",
+            "(D)",
+            "(B)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) open tap\n(B) put down baking pan\n(C) rinse baking pan\n(D) wash baking pan\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": [
+            3
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) coughing\n(B) church bells\n(C) cat\n(D) clock alarm\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "crying_baby",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crying_baby is heard?\n\n(A) second time: squash dough\n(B) first time: squash dough\n(C) spread flour\n(D) pick up dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) second time: squash dough\n(B) pick up dough\n(C) first time: squash dough\n(D) spread flour\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) second time: squash dough\n(B) first time: squash dough\n(C) pick up dough\n(D) spread flour\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: squash dough, pick up dough, squash dough, spread flour\nWhich action is most likely associated with the sound 'crying_baby'?\n\n(A) spread flour\n(B) first time: squash dough\n(C) pick up dough\n(D) second time: squash dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) second time: squash dough\n(B) spread flour\n(C) first time: squash dough\n(D) pick up dough\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(C)', '(A)', '(B)']",
+          "ground_truth": [
+            "(C)",
+            "(D)",
+            "(A)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) squash dough\n(B) pick up dough\n(C) squash dough\n(D) spread flour\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": [
+            0,
+            2
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clock alarm\n(B) cat\n(C) car horn\n(D) crying baby\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 3,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "sneezing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when sneezing is heard?\n\n(A) pick up paper\n(B) pick up washing up liquid\n(C) close hob cover\n(D) dry hands\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) close hob cover\n(B) dry hands\n(C) pick up washing up liquid\n(D) pick up paper\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) pick up paper\n(B) pick up washing up liquid\n(C) close hob cover\n(D) dry hands\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: close hob cover, pick up paper, dry hands, pick up washing up liquid\nWhich action is most likely associated with the sound 'sneezing'?\n\n(A) close hob cover\n(B) pick up paper\n(C) pick up washing up liquid\n(D) dry hands\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) dry hands\n(B) pick up washing up liquid\n(C) pick up paper\n(D) close hob cover\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(B)', '(C)', '(A)']",
+          "ground_truth": [
+            "(D)",
+            "(C)",
+            "(A)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) pick up paper\n(B) close hob cover\n(C) dry hands\n(D) pick up washing up liquid\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": [
+            0
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) sneezing\n(B) dog\n(C) laughing\n(D) chainsaw\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "clapping",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when clapping is heard?\n\n(A) pick up bowl\n(B) wash bowl\n(C) squeeze sponge\n(D) put cup on drying rack\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) pick up bowl\n(B) squeeze sponge\n(C) wash bowl\n(D) put cup on drying rack\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) pick up bowl\n(B) squeeze sponge\n(C) wash bowl\n(D) put cup on drying rack\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: squeeze sponge, put cup on drying rack, pick up bowl, wash bowl\nWhich action is most likely associated with the sound 'clapping'?\n\n(A) pick up bowl\n(B) put cup on drying rack\n(C) wash bowl\n(D) squeeze sponge\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) wash bowl\n(B) squeeze sponge\n(C) pick up bowl\n(D) put cup on drying rack\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(B)', '(A)', '(D)']",
+          "ground_truth": [
+            "(B)",
+            "(D)",
+            "(C)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) squeeze sponge\n(B) wash bowl\n(C) put cup on drying rack\n(D) pick up bowl\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) cat\n(B) clapping\n(C) clock alarm\n(D) sneezing\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 1,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "coughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when coughing is heard?\n\n(A) close drawer\n(B) open door\n(C) open drawer\n(D) search in drawer\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) close drawer\n(B) open drawer\n(C) search in drawer\n(D) open door\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) close drawer\n(B) search in drawer\n(C) open drawer\n(D) open door\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C.",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: open door, open drawer, search in drawer, close drawer\nWhich action is most likely associated with the sound 'coughing'?\n\n(A) close drawer\n(B) open door\n(C) open drawer\n(D) search in drawer\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) search in drawer\n(B) close drawer\n(C) open drawer\n(D) open door\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(C)', '(A)', '(B)']",
+          "ground_truth": [
+            "(D)",
+            "(C)",
+            "(A)",
+            "(B)"
+          ],
+          "correct": true
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) open drawer\n(B) open door\n(C) search in drawer\n(D) close drawer\n\nAnswer only with the letter.",
+          "prediction": "C.",
+          "ground_truth": [
+            1
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) laughing\n(B) coughing\n(C) dog\n(D) cat\n\nAnswer only with the letter.",
+          "prediction": "B.",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crying_baby",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crying_baby is heard?\n\n(A) put cup on drying rack\n(B) take bit of cheese off sponge\n(C) wash bowl\n(D) pick up bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) take bit of cheese off sponge\n(B) pick up bowl\n(C) put cup on drying rack\n(D) wash bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) wash bowl\n(B) put cup on drying rack\n(C) pick up bowl\n(D) take bit of cheese off sponge\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: put cup on drying rack, pick up bowl, wash bowl, take bit of cheese off sponge\nWhich action is most likely associated with the sound 'crying_baby'?\n\n(A) take bit of cheese off sponge\n(B) wash bowl\n(C) put cup on drying rack\n(D) pick up bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) wash bowl\n(B) take bit of cheese off sponge\n(C) pick up bowl\n(D) put cup on drying rack\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(A)', '(B)', '(D)']",
+          "ground_truth": [
+            "(D)",
+            "(C)",
+            "(A)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) take bit of cheese off sponge\n(B) put cup on drying rack\n(C) pick up bowl\n(D) wash bowl\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": [
+            3
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clock alarm\n(B) laughing\n(C) crying baby\n(D) cat\n\nAnswer only with the letter.",
+          "prediction": "C.",
+          "ground_truth": 2,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "clock_alarm",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when clock_alarm is heard?\n\n(A) turn on tap\n(B) pick up cheese\n(C) wash hands\n(D) sprinkle cheese\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) turn on tap\n(B) pick up cheese\n(C) sprinkle cheese\n(D) wash hands\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) turn on tap\n(B) pick up cheese\n(C) sprinkle cheese\n(D) wash hands\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C.",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: pick up cheese, sprinkle cheese, turn on tap, wash hands\nWhich action is most likely associated with the sound 'clock_alarm'?\n\n(A) turn on tap\n(B) wash hands\n(C) sprinkle cheese\n(D) pick up cheese\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) sprinkle cheese\n(B) wash hands\n(C) turn on tap\n(D) pick up cheese\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(A)', '(C)', '(B)']",
+          "ground_truth": [
+            "(D)",
+            "(A)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": true
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) sprinkle cheese\n(B) pick up cheese\n(C) turn on tap\n(D) wash hands\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": null,
+          "correct": null
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) clock alarm\n(C) cat\n(D) coughing\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "laughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when laughing is heard?\n\n(A) first time: get meat from pan\n(B) second time: place meat on dough\n(C) second time: get meat from pan\n(D) first time: place meat on dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) first time: get meat from pan\n(B) second time: get meat from pan\n(C) first time: place meat on dough\n(D) second time: place meat on dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) first time: get meat from pan\n(B) first time: place meat on dough\n(C) second time: place meat on dough\n(D) second time: get meat from pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: get meat from pan, place meat on dough, get meat from pan, place meat on dough\nWhich action is most likely associated with the sound 'laughing'?\n\n(A) second time: get meat from pan\n(B) first time: place meat on dough\n(C) first time: get meat from pan\n(D) second time: place meat on dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) first time: place meat on dough\n(B) second time: place meat on dough\n(C) second time: get meat from pan\n(D) first time: get meat from pan\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(A)', '(B)', '(C)']",
+          "ground_truth": [
+            "(D)",
+            "(A)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) place meat on dough\n(B) get meat from pan\n(C) get meat from pan\n(D) place meat on dough\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": [
+            0,
+            3
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clock alarm\n(B) laughing\n(C) sneezing\n(D) car horn\n\nAnswer only with the letter.",
+          "prediction": "B.",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "car_horn",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when car_horn is heard?\n\n(A) put down sponge\n(B) take spoon\n(C) wash spoon\n(D) turn on tap\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) put down sponge\n(B) turn on tap\n(C) take spoon\n(D) wash spoon\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) turn on tap\n(B) put down sponge\n(C) wash spoon\n(D) take spoon\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: take spoon, wash spoon, put down sponge, turn on tap\nWhich action is most likely associated with the sound 'car_horn'?\n\n(A) put down sponge\n(B) wash spoon\n(C) turn on tap\n(D) take spoon\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) turn on tap\n(B) take spoon\n(C) put down sponge\n(D) wash spoon\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(B)', '(C)', '(D)']",
+          "ground_truth": [
+            "(B)",
+            "(D)",
+            "(C)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) put down sponge\n(B) turn on tap\n(C) wash spoon\n(D) take spoon\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": [
+            2
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) coughing\n(C) clock alarm\n(D) car horn\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 3,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crow",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crow is heard?\n\n(A) cut paper\n(B) pick up pizza\n(C) remove paper\n(D) put down pizza\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) put down pizza\n(B) pick up pizza\n(C) remove paper\n(D) cut paper\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) cut paper\n(B) put down pizza\n(C) pick up pizza\n(D) remove paper\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: remove paper, put down pizza, pick up pizza, cut paper\nWhich action is most likely associated with the sound 'crow'?\n\n(A) cut paper\n(B) put down pizza\n(C) pick up pizza\n(D) remove paper\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) remove paper\n(B) cut paper\n(C) pick up pizza\n(D) put down pizza\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(B)', '(C)', '(D)']",
+          "ground_truth": [
+            "(A)",
+            "(D)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) put down pizza\n(B) remove paper\n(C) cut paper\n(D) pick up pizza\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": [
+            1
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crow\n(B) chainsaw\n(C) clapping\n(D) car horn\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "cat",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when cat is heard?\n\n(A) first time: pour water into bowl\n(B) second time: mix dough\n(C) first time: mix dough\n(D) second time: pour water into bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C.",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) second time: mix dough\n(B) first time: mix dough\n(C) first time: pour water into bowl\n(D) second time: pour water into bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) first time: pour water into bowl\n(B) second time: mix dough\n(C) second time: pour water into bowl\n(D) first time: mix dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: pour water into bowl, mix dough, pour water into bowl, mix dough\nWhich action is most likely associated with the sound 'cat'?\n\n(A) first time: mix dough\n(B) second time: pour water into bowl\n(C) second time: mix dough\n(D) first time: pour water into bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "E",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) first time: mix dough\n(B) second time: pour water into bowl\n(C) second time: mix dough\n(D) first time: pour water into bowl\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(A)', '(C)', '(B)']",
+          "ground_truth": [
+            "(D)",
+            "(A)",
+            "(B)",
+            "(C)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) pour water into bowl\n(B) mix dough\n(C) pour water into bowl\n(D) mix dough\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            0,
+            2
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) dog\n(B) cat\n(C) clapping\n(D) chainsaw\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 1,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "crying_baby",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crying_baby is heard?\n\n(A) soap fork\n(B) rinse cutlery\n(C) soap knife\n(D) lather fork\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) soap fork\n(B) soap knife\n(C) lather fork\n(D) rinse cutlery\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) lather fork\n(B) soap knife\n(C) soap fork\n(D) rinse cutlery\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: soap fork, rinse cutlery, soap knife, lather fork\nWhich action is most likely associated with the sound 'crying_baby'?\n\n(A) soap fork\n(B) lather fork\n(C) soap knife\n(D) rinse cutlery\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) soap knife\n(B) lather fork\n(C) soap fork\n(D) rinse cutlery\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(C)', '(B)', '(D)']",
+          "ground_truth": [
+            "(C)",
+            "(D)",
+            "(A)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) rinse cutlery\n(B) soap fork\n(C) soap knife\n(D) lather fork\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            0
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) car horn\n(B) crying baby\n(C) coughing\n(D) church bells\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "laughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when laughing is heard?\n\n(A) distribute meat in pan\n(B) first time: take meat from packaging\n(C) stir onion and garlic in pan using wooden spoon\n(D) second time: take meat from packaging\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) stir onion and garlic in pan using wooden spoon\n(B) distribute meat in pan\n(C) second time: take meat from packaging\n(D) first time: take meat from packaging\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) second time: take meat from packaging\n(B) first time: take meat from packaging\n(C) distribute meat in pan\n(D) stir onion and garlic in pan using wooden spoon\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: stir onion and garlic in pan using wooden spoon, take meat from packaging, distribute meat in pan, take meat from packaging\nWhich action is most likely associated with the sound 'laughing'?\n\n(A) first time: take meat from packaging\n(B) distribute meat in pan\n(C) second time: take meat from packaging\n(D) stir onion and garlic in pan using wooden spoon\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) distribute meat in pan\n(B) first time: take meat from packaging\n(C) stir onion and garlic in pan using wooden spoon\n(D) second time: take meat from packaging\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(A)', '(B)', '(D)']",
+          "ground_truth": [
+            "(C)",
+            "(B)",
+            "(A)",
+            "(D)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) take meat from packaging\n(B) distribute meat in pan\n(C) take meat from packaging\n(D) stir onion and garlic in pan using wooden spoon\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": null,
+          "correct": null
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) laughing\n(B) car horn\n(C) sneezing\n(D) clapping\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "siren",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when siren is heard?\n\n(A) squeeze dough\n(B) put ball of dough on tray\n(C) shape ball of dough\n(D) knead dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) put ball of dough on tray\n(B) knead dough\n(C) squeeze dough\n(D) shape ball of dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) squeeze dough\n(B) put ball of dough on tray\n(C) knead dough\n(D) shape ball of dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: knead dough, shape ball of dough, put ball of dough on tray, squeeze dough\nWhich action is most likely associated with the sound 'siren'?\n\n(A) knead dough\n(B) put ball of dough on tray\n(C) squeeze dough\n(D) shape ball of dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) put ball of dough on tray\n(B) shape ball of dough\n(C) knead dough\n(D) squeeze dough\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(D)', '(B)', '(A)']",
+          "ground_truth": [
+            "(C)",
+            "(B)",
+            "(A)",
+            "(D)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) knead dough\n(B) shape ball of dough\n(C) put ball of dough on tray\n(D) squeeze dough\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clapping\n(B) cat\n(C) siren\n(D) dog\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 2,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "car_horn",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when car_horn is heard?\n\n(A) take out bread from package\n(B) open bread package\n(C) put bread in toaster\n(D) turn on toaster\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) open bread package\n(B) turn on toaster\n(C) take out bread from package\n(D) put bread in toaster\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) take out bread from package\n(B) turn on toaster\n(C) put bread in toaster\n(D) open bread package\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: open bread package, take out bread from package, put bread in toaster, turn on toaster\nWhich action is most likely associated with the sound 'car_horn'?\n\n(A) put bread in toaster\n(B) take out bread from package\n(C) open bread package\n(D) turn on toaster\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) open bread package\n(B) turn on toaster\n(C) put bread in toaster\n(D) take out bread from package\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(A)', '(C)', '(B)']",
+          "ground_truth": [
+            "(A)",
+            "(D)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) take out bread from package\n(B) turn on toaster\n(C) open bread package\n(D) put bread in toaster\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": [
+            3
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) laughing\n(B) crying baby\n(C) car horn\n(D) siren\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 2,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "sneezing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when sneezing is heard?\n\n(A) turn up heat of hob\n(B) stir melted butter in large bowl\n(C) stir melting butter in large bowl\n(D) tap spoon against side of bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) turn up heat of hob\n(B) stir melting butter in large bowl\n(C) stir melted butter in large bowl\n(D) tap spoon against side of bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) stir melted butter in large bowl\n(B) turn up heat of hob\n(C) tap spoon against side of bowl\n(D) stir melting butter in large bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: stir melted butter in large bowl, turn up heat of hob, stir melting butter in large bowl, tap spoon against side of bowl\nWhich action is most likely associated with the sound 'sneezing'?\n\n(A) tap spoon against side of bowl\n(B) stir melting butter in large bowl\n(C) turn up heat of hob\n(D) stir melted butter in large bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) stir melting butter in large bowl\n(B) tap spoon against side of bowl\n(C) turn up heat of hob\n(D) stir melted butter in large bowl\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(D)', '(C)', '(B)']",
+          "ground_truth": [
+            "(D)",
+            "(C)",
+            "(A)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) stir melted butter in large bowl\n(B) tap spoon against side of bowl\n(C) turn up heat of hob\n(D) stir melting butter in large bowl\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": [
+            3
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) dog\n(C) sneezing\n(D) laughing\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 2,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "chainsaw",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when chainsaw is heard?\n\n(A) cutting salad\n(B) first time: place salad in bowl\n(C) second time: place salad in bowl\n(D) continue cut salad\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) first time: place salad in bowl\n(B) cutting salad\n(C) second time: place salad in bowl\n(D) continue cut salad\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) continue cut salad\n(B) cutting salad\n(C) second time: place salad in bowl\n(D) first time: place salad in bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: cutting salad, place salad in bowl, continue cut salad, place salad in bowl\nWhich action is most likely associated with the sound 'chainsaw'?\n\n(A) cutting salad\n(B) first time: place salad in bowl\n(C) second time: place salad in bowl\n(D) continue cut salad\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) continue cut salad\n(B) cutting salad\n(C) first time: place salad in bowl\n(D) second time: place salad in bowl\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(B)', '(C)', '(D)', '(A)']",
+          "ground_truth": [
+            "(B)",
+            "(C)",
+            "(A)",
+            "(D)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) place salad in bowl\n(B) cutting salad\n(C) place salad in bowl\n(D) continue cut salad\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crow\n(B) chainsaw\n(C) clock alarm\n(D) dog\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "car_horn",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when car_horn is heard?\n\n(A) first time: get meat from pan\n(B) second time: get meat from pan\n(C) first time: place meat on dough\n(D) second time: place meat on dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) first time: get meat from pan\n(B) second time: get meat from pan\n(C) second time: place meat on dough\n(D) first time: place meat on dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) second time: get meat from pan\n(B) first time: get meat from pan\n(C) second time: place meat on dough\n(D) first time: place meat on dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: place meat on dough, get meat from pan, place meat on dough, get meat from pan\nWhich action is most likely associated with the sound 'car_horn'?\n\n(A) second time: get meat from pan\n(B) second time: place meat on dough\n(C) first time: place meat on dough\n(D) first time: get meat from pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) second time: place meat on dough\n(B) second time: get meat from pan\n(C) first time: get meat from pan\n(D) first time: place meat on dough\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(D)', '(B)', '(A)']",
+          "ground_truth": [
+            "(D)",
+            "(C)",
+            "(A)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) place meat on dough\n(B) place meat on dough\n(C) get meat from pan\n(D) get meat from pan\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": [
+            0,
+            1
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crow\n(B) car horn\n(C) laughing\n(D) siren\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "dog",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when dog is heard?\n\n(A) put down carrots\n(B) close fridge\n(C) open drawer\n(D) pick up carrots\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) pick up carrots\n(B) put down carrots\n(C) open drawer\n(D) close fridge\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) close fridge\n(B) pick up carrots\n(C) put down carrots\n(D) open drawer\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: open drawer, pick up carrots, close fridge, put down carrots\nWhich action is most likely associated with the sound 'dog'?\n\n(A) put down carrots\n(B) pick up carrots\n(C) open drawer\n(D) close fridge\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) close fridge\n(B) open drawer\n(C) pick up carrots\n(D) put down carrots\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(B)', '(C)', '(D)']",
+          "ground_truth": [
+            "(B)",
+            "(C)",
+            "(A)",
+            "(D)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) put down carrots\n(B) pick up carrots\n(C) open drawer\n(D) close fridge\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) sneezing\n(B) clock alarm\n(C) coughing\n(D) dog\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "coughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when coughing is heard?\n\n(A) mix mixture using hand\n(B) open flour\n(C) get extra flour using hand\n(D) remove remainder of mixture from spoon\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) open flour\n(B) remove remainder of mixture from spoon\n(C) mix mixture using hand\n(D) get extra flour using hand\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) mix mixture using hand\n(B) open flour\n(C) remove remainder of mixture from spoon\n(D) get extra flour using hand\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: remove remainder of mixture from spoon, mix mixture using hand, open flour, get extra flour using hand\nWhich action is most likely associated with the sound 'coughing'?\n\n(A) get extra flour using hand\n(B) mix mixture using hand\n(C) remove remainder of mixture from spoon\n(D) open flour\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) get extra flour using hand\n(B) mix mixture using hand\n(C) open flour\n(D) remove remainder of mixture from spoon\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(B)', '(A)', '(D)', '(C)']",
+          "ground_truth": [
+            "(D)",
+            "(B)",
+            "(C)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) get extra flour using hand\n(B) mix mixture using hand\n(C) remove remainder of mixture from spoon\n(D) open flour\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            2
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crow\n(B) dog\n(C) coughing\n(D) cat\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "church_bells",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when church_bells is heard?\n\n(A) sprinkle chilli flakes on pizza\n(B) open cupboard\n(C) open chilli flakes jar\n(D) take chilli flakes\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) sprinkle chilli flakes on pizza\n(B) open chilli flakes jar\n(C) open cupboard\n(D) take chilli flakes\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) take chilli flakes\n(B) sprinkle chilli flakes on pizza\n(C) open cupboard\n(D) open chilli flakes jar\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: open cupboard, take chilli flakes, open chilli flakes jar, sprinkle chilli flakes on pizza\nWhich action is most likely associated with the sound 'church_bells'?\n\n(A) open chilli flakes jar\n(B) take chilli flakes\n(C) open cupboard\n(D) sprinkle chilli flakes on pizza\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) sprinkle chilli flakes on pizza\n(B) open cupboard\n(C) take chilli flakes\n(D) open chilli flakes jar\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(B)', '(D)', '(C)', '(A)']",
+          "ground_truth": [
+            "(B)",
+            "(C)",
+            "(D)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) take chilli flakes\n(B) open chilli flakes jar\n(C) open cupboard\n(D) sprinkle chilli flakes on pizza\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": [
+            3
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) dog\n(B) crow\n(C) church bells\n(D) laughing\n\nAnswer only with the letter.",
+          "prediction": "C.",
+          "ground_truth": 2,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "clock_alarm",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when clock_alarm is heard?\n\n(A) water the sponge\n(B) clean sink\n(C) clean the counter top\n(D) squeeze sponge\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) clean the counter top\n(B) water the sponge\n(C) squeeze sponge\n(D) clean sink\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) clean the counter top\n(B) squeeze sponge\n(C) clean sink\n(D) water the sponge\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: water the sponge, squeeze sponge, clean the counter top, clean sink\nWhich action is most likely associated with the sound 'clock_alarm'?\n\n(A) clean sink\n(B) water the sponge\n(C) clean the counter top\n(D) squeeze sponge\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) water the sponge\n(B) clean sink\n(C) squeeze sponge\n(D) clean the counter top\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(B)', '(A)', '(C)', '(D)']",
+          "ground_truth": [
+            "(A)",
+            "(C)",
+            "(D)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) squeeze sponge\n(B) water the sponge\n(C) clean the counter top\n(D) clean sink\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            2
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) clock alarm\n(C) coughing\n(D) clapping\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "church_bells",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when church_bells is heard?\n\n(A) put into the bag\n(B) put into the dustbin\n(C) put the plastic cover into the bag\n(D) clean the table\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) put the plastic cover into the bag\n(B) put into the bag\n(C) put into the dustbin\n(D) clean the table\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) put the plastic cover into the bag\n(B) clean the table\n(C) put into the dustbin\n(D) put into the bag\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: put into the bag, put the plastic cover into the bag, clean the table, put into the dustbin\nWhich action is most likely associated with the sound 'church_bells'?\n\n(A) clean the table\n(B) put into the dustbin\n(C) put into the bag\n(D) put the plastic cover into the bag\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) put into the dustbin\n(B) put the plastic cover into the bag\n(C) put into the bag\n(D) clean the table\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(C)', '(B)', '(A)']",
+          "ground_truth": [
+            "(C)",
+            "(B)",
+            "(D)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) clean the table\n(B) put into the dustbin\n(C) put the plastic cover into the bag\n(D) put into the bag\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": [
+            0
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) laughing\n(B) chainsaw\n(C) church bells\n(D) car horn\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 2,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "laughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when laughing is heard?\n\n(A) first time: lather pan\n(B) first time: rinse pan\n(C) second time: rinse pan\n(D) second time: lather pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) second time: rinse pan\n(B) first time: rinse pan\n(C) second time: lather pan\n(D) first time: lather pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) first time: rinse pan\n(B) first time: lather pan\n(C) second time: lather pan\n(D) second time: rinse pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: rinse pan, lather pan, rinse pan, lather pan\nWhich action is most likely associated with the sound 'laughing'?\n\n(A) first time: rinse pan\n(B) second time: rinse pan\n(C) first time: lather pan\n(D) second time: lather pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) first time: lather pan\n(B) second time: lather pan\n(C) second time: rinse pan\n(D) first time: rinse pan\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(B)', '(C)', '(D)']",
+          "ground_truth": [
+            "(D)",
+            "(A)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) rinse pan\n(B) lather pan\n(C) lather pan\n(D) rinse pan\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1,
+            2
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clapping\n(B) crying baby\n(C) chainsaw\n(D) laughing\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 3,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crying_baby",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crying_baby is heard?\n\n(A) first time: place meat on dough\n(B) second time: place meat on dough\n(C) first time: get meat from pan\n(D) second time: get meat from pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) first time: place meat on dough\n(B) first time: get meat from pan\n(C) second time: place meat on dough\n(D) second time: get meat from pan\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) first time: place meat on dough\n(B) first time: get meat from pan\n(C) second time: get meat from pan\n(D) second time: place meat on dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: get meat from pan, place meat on dough, get meat from pan, place meat on dough\nWhich action is most likely associated with the sound 'crying_baby'?\n\n(A) first time: get meat from pan\n(B) second time: get meat from pan\n(C) first time: place meat on dough\n(D) second time: place meat on dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) second time: place meat on dough\n(B) first time: get meat from pan\n(C) second time: get meat from pan\n(D) first time: place meat on dough\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(A)', '(C)', '(B)']",
+          "ground_truth": [
+            "(B)",
+            "(D)",
+            "(C)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) place meat on dough\n(B) place meat on dough\n(C) get meat from pan\n(D) get meat from pan\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": [
+            0,
+            1
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) coughing\n(C) church bells\n(D) dog\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "siren",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when siren is heard?\n\n(A) get the kitchen bag\n(B) close plastic bag\n(C) wipe off hands\n(D) open drawer\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) wipe off hands\n(B) get the kitchen bag\n(C) open drawer\n(D) close plastic bag\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) close plastic bag\n(B) get the kitchen bag\n(C) open drawer\n(D) wipe off hands\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: wipe off hands, close plastic bag, open drawer, get the kitchen bag\nWhich action is most likely associated with the sound 'siren'?\n\n(A) close plastic bag\n(B) wipe off hands\n(C) get the kitchen bag\n(D) open drawer\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) close plastic bag\n(B) get the kitchen bag\n(C) open drawer\n(D) wipe off hands\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(B)', '(C)', '(A)']",
+          "ground_truth": [
+            "(D)",
+            "(A)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) close plastic bag\n(B) wipe off hands\n(C) open drawer\n(D) get the kitchen bag\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clock alarm\n(B) sneezing\n(C) crow\n(D) siren\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 3,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crow",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crow is heard?\n\n(A) second time: cut cucumber\n(B) first time: cut cucumber\n(C) slice cucumber\n(D) move plastic on cucumber\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) move plastic on cucumber\n(B) slice cucumber\n(C) second time: cut cucumber\n(D) first time: cut cucumber\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) slice cucumber\n(B) move plastic on cucumber\n(C) second time: cut cucumber\n(D) first time: cut cucumber\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: move plastic on cucumber, cut cucumber, slice cucumber, cut cucumber\nWhich action is most likely associated with the sound 'crow'?\n\n(A) first time: cut cucumber\n(B) slice cucumber\n(C) move plastic on cucumber\n(D) second time: cut cucumber\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) move plastic on cucumber\n(B) second time: cut cucumber\n(C) slice cucumber\n(D) first time: cut cucumber\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(D)', '(B)', '(C)']",
+          "ground_truth": [
+            "(A)",
+            "(D)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) cut cucumber\n(B) slice cucumber\n(C) cut cucumber\n(D) move plastic on cucumber\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            0,
+            2
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crow\n(B) sneezing\n(C) cat\n(D) clock alarm\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "laughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when laughing is heard?\n\n(A) put back the pepper shaker\n(B) mix the bell pepper\n(C) mix the mixture\n(D) pour some pepper\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) put back the pepper shaker\n(B) mix the bell pepper\n(C) mix the mixture\n(D) pour some pepper\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) mix the bell pepper\n(B) pour some pepper\n(C) put back the pepper shaker\n(D) mix the mixture\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: mix the bell pepper, pour some pepper, put back the pepper shaker, mix the mixture\nWhich action is most likely associated with the sound 'laughing'?\n\n(A) put back the pepper shaker\n(B) mix the bell pepper\n(C) mix the mixture\n(D) pour some pepper\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) mix the mixture\n(B) mix the bell pepper\n(C) pour some pepper\n(D) put back the pepper shaker\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(B)', '(A)', '(D)']",
+          "ground_truth": [
+            "(B)",
+            "(C)",
+            "(D)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) put back the pepper shaker\n(B) mix the bell pepper\n(C) mix the mixture\n(D) pour some pepper\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": [
+            2
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) laughing\n(B) clock alarm\n(C) coughing\n(D) siren\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "laughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when laughing is heard?\n\n(A) close eggs package\n(B) open fridge\n(C) take eggs\n(D) open egg package\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) close eggs package\n(B) open egg package\n(C) open fridge\n(D) take eggs\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) close eggs package\n(B) open fridge\n(C) open egg package\n(D) take eggs\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: open fridge, open egg package, take eggs, close eggs package\nWhich action is most likely associated with the sound 'laughing'?\n\n(A) open egg package\n(B) close eggs package\n(C) open fridge\n(D) take eggs\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) open egg package\n(B) open fridge\n(C) close eggs package\n(D) take eggs\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(B)', '(D)', '(A)', '(C)']",
+          "ground_truth": [
+            "(B)",
+            "(A)",
+            "(D)",
+            "(C)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) close eggs package\n(B) open fridge\n(C) open egg package\n(D) take eggs\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            3
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) sneezing\n(B) chainsaw\n(C) crow\n(D) laughing\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 3,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crying_baby",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crying_baby is heard?\n\n(A) take spoon\n(B) stir rice\n(C) put spoon\n(D) turn gas on\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) stir rice\n(B) take spoon\n(C) put spoon\n(D) turn gas on\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) put spoon\n(B) turn gas on\n(C) take spoon\n(D) stir rice\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: take spoon, stir rice, turn gas on, put spoon\nWhich action is most likely associated with the sound 'crying_baby'?\n\n(A) put spoon\n(B) stir rice\n(C) take spoon\n(D) turn gas on\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) put spoon\n(B) stir rice\n(C) take spoon\n(D) turn gas on\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(C)', '(A)', '(B)']",
+          "ground_truth": [
+            "(C)",
+            "(B)",
+            "(D)",
+            "(A)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) stir rice\n(B) take spoon\n(C) put spoon\n(D) turn gas on\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": [
+            0
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) laughing\n(C) church bells\n(D) car horn\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "coughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when coughing is heard?\n\n(A) open popcorn package\n(B) pour popcorn in container\n(C) close microwave\n(D) place popcorn package on table\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 0,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) close microwave\n(B) place popcorn package on table\n(C) pour popcorn in container\n(D) open popcorn package\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) place popcorn package on table\n(B) pour popcorn in container\n(C) open popcorn package\n(D) close microwave\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 2,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: close microwave, open popcorn package, pour popcorn in container, place popcorn package on table\nWhich action is most likely associated with the sound 'coughing'?\n\n(A) pour popcorn in container\n(B) place popcorn package on table\n(C) close microwave\n(D) open popcorn package\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) pour popcorn in container\n(B) open popcorn package\n(C) place popcorn package on table\n(D) close microwave\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(B)', '(A)', '(C)', '(D)']",
+          "ground_truth": [
+            "(D)",
+            "(B)",
+            "(A)",
+            "(C)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) pour popcorn in container\n(B) open popcorn package\n(C) place popcorn package on table\n(D) close microwave\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) clapping\n(B) coughing\n(C) laughing\n(D) crying baby\n\nAnswer only with the letter.",
+          "prediction": "B.",
+          "ground_truth": 1,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "clapping",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when clapping is heard?\n\n(A) second time: lather plate\n(B) first time: rinse plate\n(C) second time: rinse plate\n(D) first time: lather plate\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) first time: rinse plate\n(B) first time: lather plate\n(C) second time: rinse plate\n(D) second time: lather plate\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) second time: lather plate\n(B) first time: lather plate\n(C) second time: rinse plate\n(D) first time: rinse plate\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: lather plate, rinse plate, lather plate, rinse plate\nWhich action is most likely associated with the sound 'clapping'?\n\n(A) second time: rinse plate\n(B) first time: rinse plate\n(C) second time: lather plate\n(D) first time: lather plate\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) first time: lather plate\n(B) second time: rinse plate\n(C) second time: lather plate\n(D) first time: rinse plate\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(C)', '(B)', '(D)']",
+          "ground_truth": [
+            "(A)",
+            "(D)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) lather plate\n(B) rinse plate\n(C) lather plate\n(D) rinse plate\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": [
+            1,
+            3
+          ],
+          "correct": false
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) church bells\n(B) clock alarm\n(C) clapping\n(D) crow\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 2,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "laughing",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when laughing is heard?\n\n(A) take paper from paper roll\n(B) clean sink with paper\n(C) clean desk with paper\n(D) pick up paper roll\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) clean desk with paper\n(B) clean sink with paper\n(C) pick up paper roll\n(D) take paper from paper roll\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) take paper from paper roll\n(B) pick up paper roll\n(C) clean sink with paper\n(D) clean desk with paper\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 2,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: pick up paper roll, take paper from paper roll, clean desk with paper, clean sink with paper\nWhich action is most likely associated with the sound 'laughing'?\n\n(A) clean sink with paper\n(B) clean desk with paper\n(C) take paper from paper roll\n(D) pick up paper roll\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) clean sink with paper\n(B) clean desk with paper\n(C) take paper from paper roll\n(D) pick up paper roll\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(C)', '(B)', '(A)']",
+          "ground_truth": [
+            "(D)",
+            "(C)",
+            "(B)",
+            "(A)"
+          ],
+          "correct": true
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) clean sink with paper\n(B) take paper from paper roll\n(C) clean desk with paper\n(D) pick up paper roll\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": [
+            0
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) laughing\n(B) clock alarm\n(C) sneezing\n(D) car horn\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crying_baby",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crying_baby is heard?\n\n(A) second time: cut onion\n(B) wash onion\n(C) turn on tap\n(D) first time: cut onion\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) first time: cut onion\n(B) turn on tap\n(C) second time: cut onion\n(D) wash onion\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) turn on tap\n(B) first time: cut onion\n(C) second time: cut onion\n(D) wash onion\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: cut onion, turn on tap, cut onion, wash onion\nWhich action is most likely associated with the sound 'crying_baby'?\n\n(A) wash onion\n(B) turn on tap\n(C) second time: cut onion\n(D) first time: cut onion\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) first time: cut onion\n(B) wash onion\n(C) second time: cut onion\n(D) turn on tap\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(B)', '(A)', '(C)']",
+          "ground_truth": [
+            "(A)",
+            "(D)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) turn on tap\n(B) cut onion\n(C) cut onion\n(D) wash onion\n\nAnswer only with the letter.",
+          "prediction": "D.",
+          "ground_truth": [
+            3
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crying baby\n(B) dog\n(C) church bells\n(D) chainsaw\n\nAnswer only with the letter.",
+          "prediction": "A.",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "clapping",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when clapping is heard?\n\n(A) first time: mix dough\n(B) second time: pour water into bowl\n(C) first time: pour water into bowl\n(D) second time: mix dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) first time: pour water into bowl\n(B) first time: mix dough\n(C) second time: mix dough\n(D) second time: pour water into bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 3,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) second time: pour water into bowl\n(B) first time: pour water into bowl\n(C) second time: mix dough\n(D) first time: mix dough\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: pour water into bowl, mix dough, pour water into bowl, mix dough\nWhich action is most likely associated with the sound 'clapping'?\n\n(A) second time: pour water into bowl\n(B) first time: mix dough\n(C) second time: mix dough\n(D) first time: pour water into bowl\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) first time: mix dough\n(B) second time: mix dough\n(C) first time: pour water into bowl\n(D) second time: pour water into bowl\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(C)', '(A)', '(D)', '(B)']",
+          "ground_truth": [
+            "(C)",
+            "(A)",
+            "(D)",
+            "(B)"
+          ],
+          "correct": true
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) mix dough\n(B) mix dough\n(C) pour water into bowl\n(D) pour water into bowl\n\nAnswer only with the letter.",
+          "prediction": "C",
+          "ground_truth": [
+            2,
+            3
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crow\n(B) clock alarm\n(C) church bells\n(D) clapping\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 3,
+          "correct": false
+        }
+      }
+    },
+    {
+      "audio_class": "crow",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crow is heard?\n\n(A) second time: peel onion\n(B) first time: peel onion\n(C) chop end of onion\n(D) put onion\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 1,
+          "correct": true
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) second time: peel onion\n(B) first time: peel onion\n(C) put onion\n(D) chop end of onion\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 1,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) second time: peel onion\n(B) chop end of onion\n(C) put onion\n(D) first time: peel onion\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 3,
+          "correct": true
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: peel onion, chop end of onion, peel onion, put onion\nWhich action is most likely associated with the sound 'crow'?\n\n(A) first time: peel onion\n(B) second time: peel onion\n(C) chop end of onion\n(D) put onion\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 0,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) chop end of onion\n(B) put onion\n(C) second time: peel onion\n(D) first time: peel onion\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(D)', '(C)', '(B)', '(A)']",
+          "ground_truth": [
+            "(D)",
+            "(A)",
+            "(C)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) peel onion\n(B) put onion\n(C) peel onion\n(D) chop end of onion\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": [
+            0,
+            2
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) crow\n(B) dog\n(C) clapping\n(D) clock alarm\n\nAnswer only with the letter.",
+          "prediction": "A",
+          "ground_truth": 0,
+          "correct": true
+        }
+      }
+    },
+    {
+      "audio_class": "crow",
+      "tasks": {
+        "audio_visual_alignment": {
+          "prompt": "What is the person in the video doing when crow is heard?\n\n(A) put spoon\n(B) stir rice\n(C) turn gas on\n(D) take spoon\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "visual_only": {
+          "prompt": "What action is happening during the highlighted segment?\n\n(A) take spoon\n(B) put spoon\n(C) stir rice\n(D) turn gas on\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "audio_only": {
+          "prompt": "What action is associated with the sound you hear?\n\n(A) take spoon\n(B) turn gas on\n(C) put spoon\n(D) stir rice\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "text_only": {
+          "prompt": "Given these event descriptions: take spoon, stir rice, turn gas on, put spoon\nWhich action is most likely associated with the sound 'crow'?\n\n(A) stir rice\n(B) take spoon\n(C) put spoon\n(D) turn gas on\n(E) none of the above\n\nAnswer only with the letter.",
+          "prediction": "D",
+          "ground_truth": 4,
+          "correct": false
+        },
+        "temporal_ordering": {
+          "prompt": "Order these events chronologically:\n\n(A) turn gas on\n(B) put spoon\n(C) stir rice\n(D) take spoon\n\nProvide the correct temporal order as a list like ['(A)', '(B)', '(C)', '(D)'].",
+          "prediction": "['(A)', '(D)', '(B)', '(C)']",
+          "ground_truth": [
+            "(D)",
+            "(C)",
+            "(A)",
+            "(B)"
+          ],
+          "correct": false
+        },
+        "action_recognition": {
+          "prompt": "Which action occurs during the overlayed audio segment?\n\n(A) take spoon\n(B) stir rice\n(C) put spoon\n(D) turn gas on\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": [
+            1
+          ],
+          "correct": true
+        },
+        "audio_classification": {
+          "prompt": "What sound is overlayed on the video?\n\n(A) coughing\n(B) cat\n(C) crow\n(D) sneezing\n\nAnswer only with the letter.",
+          "prediction": "B",
+          "ground_truth": 2,
+          "correct": false
+        }
+      }
+    }
+  ]
+}

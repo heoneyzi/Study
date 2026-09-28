@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" font-family="system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">video-SALMONN 2+ 3B on DAVE: accuracy per task</title>
+<desc id="d">Audio classification 0.68 (34/50), chance 0.25; Action recognition 0.50 (24/48), chance 0.25; Audio-visual alignment 0.46 (23/50), chance 0.20; Visual only 0.34 (17/50), chance 0.20; Audio only 0.26 (13/50), chance 0.20; Text only 0.12 (6/50), chance 0.20; Temporal ordering 0.10 (5/50), chance 0.04</desc>
+<rect x="0.5" y="0.5" width="759" height="359" rx="10" fill="#fcfcfb" stroke="rgba(11,11,11,0.10)"/>
+<text x="24" y="32" font-size="16" font-weight="600" fill="#0b0b0b">video-SALMONN 2+ 3B on DAVE — accuracy per task</text>
+<text x="24" y="52" font-size="12" fill="#52514e">EPIC-KITCHENS split · 50 random samples (seed 0) · greedy decoding · black tick = chance level</text>
+<line x1="200.0" y1="70" x2="200.0" y2="310" stroke="#c3c2b7" stroke-width="1"/>
+<text x="200.0" y="328" font-size="11" fill="#898781" text-anchor="middle">0%</text>
+<line x1="310.0" y1="70" x2="310.0" y2="310" stroke="#e1e0d9" stroke-width="1"/>
+<text x="310.0" y="328" font-size="11" fill="#898781" text-anchor="middle">25%</text>
+<line x1="420.0" y1="70" x2="420.0" y2="310" stroke="#e1e0d9" stroke-width="1"/>
+<text x="420.0" y="328" font-size="11" fill="#898781" text-anchor="middle">50%</text>
+<line x1="530.0" y1="70" x2="530.0" y2="310" stroke="#e1e0d9" stroke-width="1"/>
+<text x="530.0" y="328" font-size="11" fill="#898781" text-anchor="middle">75%</text>
+<line x1="640.0" y1="70" x2="640.0" y2="310" stroke="#e1e0d9" stroke-width="1"/>
+<text x="640.0" y="328" font-size="11" fill="#898781" text-anchor="middle">100%</text>
+<text x="188" y="93.0" font-size="13" fill="#0b0b0b" text-anchor="end">Audio classification</text>
+<path d="M200,80.0 H495.2 Q499.2,80.0 499.2,84.0 V94.0 Q499.2,98.0 495.2,98.0 H200 Z" fill="#2a78d6"/>
+<line x1="310.0" y1="76.0" x2="310.0" y2="102.0" stroke="#fcfcfb" stroke-width="6"/>
+<line x1="310.0" y1="76.0" x2="310.0" y2="102.0" stroke="#0b0b0b" stroke-width="2"/>
+<text x="507.2" y="93.0" font-size="12" fill="#0b0b0b">68%<tspan fill="#52514e"> · 34/50</tspan></text>
+<text x="188" y="127.0" font-size="13" fill="#0b0b0b" text-anchor="end">Action recognition</text>
+<path d="M200,114.0 H416.0 Q420.0,114.0 420.0,118.0 V128.0 Q420.0,132.0 416.0,132.0 H200 Z" fill="#2a78d6"/>
+<line x1="310.0" y1="110.0" x2="310.0" y2="136.0" stroke="#fcfcfb" stroke-width="6"/>
+<line x1="310.0" y1="110.0" x2="310.0" y2="136.0" stroke="#0b0b0b" stroke-width="2"/>
+<text x="428.0" y="127.0" font-size="12" fill="#0b0b0b">50%<tspan fill="#52514e"> · 24/48</tspan></text>
+<text x="188" y="161.0" font-size="13" fill="#0b0b0b" text-anchor="end">Audio-visual alignment</text>
+<path d="M200,148.0 H398.4 Q402.4,148.0 402.4,152.0 V162.0 Q402.4,166.0 398.4,166.0 H200 Z" fill="#2a78d6"/>
+<line x1="288.0" y1="144.0" x2="288.0" y2="170.0" stroke="#fcfcfb" stroke-width="6"/>
+<line x1="288.0" y1="144.0" x2="288.0" y2="170.0" stroke="#0b0b0b" stroke-width="2"/>
+<text x="410.4" y="161.0" font-size="12" fill="#0b0b0b">46%<tspan fill="#52514e"> · 23/50</tspan></text>
+<text x="188" y="195.0" font-size="13" fill="#0b0b0b" text-anchor="end">Visual only</text>
+<path d="M200,182.0 H345.6 Q349.6,182.0 349.6,186.0 V196.0 Q349.6,200.0 345.6,200.0 H200 Z" fill="#2a78d6"/>
+<line x1="288.0" y1="178.0" x2="288.0" y2="204.0" stroke="#fcfcfb" stroke-width="6"/>
+<line x1="288.0" y1="178.0" x2="288.0" y2="204.0" stroke="#0b0b0b" stroke-width="2"/>
+<text x="357.6" y="195.0" font-size="12" fill="#0b0b0b">34%<tspan fill="#52514e"> · 17/50</tspan></text>
+<text x="188" y="229.0" font-size="13" fill="#0b0b0b" text-anchor="end">Audio only</text>
+<path d="M200,216.0 H310.4 Q314.4,216.0 314.4,220.0 V230.0 Q314.4,234.0 310.4,234.0 H200 Z" fill="#2a78d6"/>
+<line x1="288.0" y1="212.0" x2="288.0" y2="238.0" stroke="#fcfcfb" stroke-width="6"/>
+<line x1="288.0" y1="212.0" x2="288.0" y2="238.0" stroke="#0b0b0b" stroke-width="2"/>
+<text x="322.4" y="229.0" font-size="12" fill="#0b0b0b">26%<tspan fill="#52514e"> · 13/50</tspan></text>
+<text x="188" y="263.0" font-size="13" fill="#0b0b0b" text-anchor="end">Text only</text>
+<path d="M200,250.0 H248.8 Q252.8,250.0 252.8,254.0 V264.0 Q252.8,268.0 248.8,268.0 H200 Z" fill="#2a78d6"/>
+<line x1="288.0" y1="246.0" x2="288.0" y2="272.0" stroke="#fcfcfb" stroke-width="6"/>
+<line x1="288.0" y1="246.0" x2="288.0" y2="272.0" stroke="#0b0b0b" stroke-width="2"/>
+<text x="296.0" y="263.0" font-size="12" fill="#0b0b0b">12%<tspan fill="#52514e"> · 6/50</tspan></text>
+<text x="188" y="297.0" font-size="13" fill="#0b0b0b" text-anchor="end">Temporal ordering</text>
+<path d="M200,284.0 H240.0 Q244.0,284.0 244.0,288.0 V298.0 Q244.0,302.0 240.0,302.0 H200 Z" fill="#2a78d6"/>
+<line x1="218.3" y1="280.0" x2="218.3" y2="306.0" stroke="#fcfcfb" stroke-width="6"/>
+<line x1="218.3" y1="280.0" x2="218.3" y2="306.0" stroke="#0b0b0b" stroke-width="2"/>
+<text x="252.0" y="297.0" font-size="12" fill="#0b0b0b">10%<tspan fill="#52514e"> · 5/50</tspan></text>
+<text x="310.0" y="66" font-size="11" fill="#52514e" text-anchor="middle">chance</text>
+<text x="24" y="348" font-size="11" fill="#898781">Source: experiments/E2_dave_eval/results/dave_results.json · action recognition scored on 48 items (2 without ground truth)</text>
+</svg>
