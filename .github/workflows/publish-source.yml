@@ -22,7 +22,7 @@ jobs:
           p=Path('.publication/manifest.json')
           if not p.exists():
               print('The source import is already complete.'); raise SystemExit(0)
-          assert hashlib.sha256(p.read_bytes()).hexdigest() == '40b830416d63bdd1bcaff5892fa97b7d70d5f972b588618ab66f333452da160b'
+          assert hashlib.sha256(p.read_bytes()).hexdigest() == '0808e2969684137c106b8a64ecd997d56658b5a6a2f6331b7d554410d39922de'
           m=json.loads(p.read_text())
           parts=[]
           for c in m['chunks']:
