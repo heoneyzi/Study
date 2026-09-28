@@ -1,0 +1,59 @@
+name: Remove Korean summary sections
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/remove-korean-summaries.yml]
+permissions:
+  contents: write
+jobs:
+  update:
+    if: github.repository == 'heoneyzi/Study'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Apply the reviewed Markdown-only edits
+        shell: bash
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path
+          import hashlib, json, subprocess
+          import re
+          LABEL=re.compile(r'한국어\s*요약|국문\s*요약|korean\s*summary',re.I)
+          DETAILS=re.compile(r'<details\b[^>]*>.*?</details>',re.I|re.S)
+          HEAD=re.compile(r'^(#{1,6})[ \t]+(.+?)[ \t]*$',re.M)
+          def clean(text):
+              def drop(m):
+                  summary=re.search(r'<summary\b[^>]*>(.*?)</summary>',m.group(),re.I|re.S)
+                  return '' if summary and LABEL.search(summary.group(1)) else m.group()
+              new=DETAILS.sub(drop,text)
+              headings=list(HEAD.finditer(new));remove=[]
+              for i,h in enumerate(headings):
+                  if not LABEL.search(h.group(2)):continue
+                  end=next((x.start() for x in headings[i+1:] if len(x.group(1))<=len(h.group(1))),len(new))
+                  remove.append((h.start(),end))
+              for a,b in reversed(remove):new=new[:a]+new[b:]
+              if new!=text:new=re.sub(r'\n{3,}','\n\n',new)
+              return new
+
+          expected={'Genomics/00_primer/README.md': {'before': '56fbce68269112b096629665b753fa069f1d7c9a5b3e90272291d8ab41ab9fdb', 'after': '07812c8ff17e43c46224be841357ceedbf05909619358b1cbcafe21bca701ec4'}, 'Genomics/README.md': {'before': '9433916702453024fcf404875edb439a2e1000bc46f6b26c96e5c30c345c2d8a', 'after': '995ddb36c0896be22271fcf689889791185a11a10dadae4d0464156fbe946995'}, 'Genomics/season1_functional_genomics/README.md': {'before': '3b85ca7d83b2167d62233afc231d575f4e80eeba73249c8c23e9b3c702d40823', 'after': 'b286d437b9d027c2bb1f9aa571fdd6b1331d941bbead8f834a12dcaba244f6de'}, 'Genomics/season1_functional_genomics/cafa6/README.md': {'before': '5e6017dda733631e5e57990a0643263d49267a8634c8747a7fa87fdb7fb2c3ee', 'after': 'd553231a669040fb6df06359d3a897604806a72a4ced81223789fdbb6e2d3c8d'}, 'Genomics/season1_functional_genomics/essays/README.md': {'before': 'aeda33bd7b3ae861209934fa266a80608fed288f46b7c68657d4b54a8357c7ac', 'after': 'af51ff7feb1b7285dbcfa6af9b1267982d35090bf028d71ecb4a8565edb06f35'}, 'Genomics/season1_functional_genomics/journal_club/README.md': {'before': '05c1533df2d147df3b65b786ed87d74836ea86083d615799e7362f17b0d1d77d', 'after': '76c26f472680e695f0c9f9589c2cb3de759ef9491a85428797a5eebb677306a1'}, 'Genomics/season1_functional_genomics/journal_club/proposals/README.md': {'before': 'c261b7ca4cd403ac5175b8d38d05a7a81da371b346dbf3e5b6cf6147074f5a86', 'after': '84ab02af0653980f478cfa1a33553c62a4027c1341cafcf3a0c3607afb588d49'}, 'Genomics/season1_functional_genomics/meetings/README.md': {'before': '50b223d3e9b90f480c49a6d44d46d43a2dafdf76975e21f1d064117b7779c0d0', 'after': '514f04311ceb51be7c0e183e92faaaf137cd6acaa8282ce2ee2dc170202f209e'}, 'Genomics/season2_functional_genomics_2/README.md': {'before': '8437fba18982c99d73f98f61aab6d396c553cdc1c470fb7e4f6d6848299752e2', 'after': '33fa1b8ce2a2bdfcda48c10b881be80e10fb0ce7f4559737207b1edca5b404a5'}, 'Genomics/season2_functional_genomics_2/reviews/README.md': {'before': 'ef76437f1a35bd7bf58b351bb178a898708eae6909d490b419f0748d7dd8a699', 'after': 'c0080e9316008f0fa63f9add7c98766c673f5e7763316273be344b7704996c49'}, 'Genomics/season2_functional_genomics_2/sessions/README.md': {'before': '64cbc652753cfdd105ee59568792638ef468497415818b68484e7638b6f13e67', 'after': 'c6fc4f5b37e2c3871c9a5c67377e31ab19a2a13c59b9192f8ee1f252a1de6c4f'}, 'Genomics/season2_functional_genomics_2/vcc2026/README.md': {'before': 'f4402dbf6de72ac40cfa0d3960f2416768ffaf343abea07c791bfc97c94f1b4a', 'after': '48a9e8b80e4a26a3bf26a6970dd4a6dabcef8ad9a7a75b6fd9741d96b9b9ff89'}, 'Hallucination/01_foundations/README.md': {'before': '16591248b15dbef77fb5e884db23fffee8eccfc7e2c79a96a59a0f449b578960', 'after': '75bbf3febb4e51a334cff4310fef4facbae83eedfc1a049ccdfe91957a0b0e99'}, 'Hallucination/02_paper_reviews/README.md': {'before': '1e6bf4b3c71f20123274a5914e11dfcf78ca99c9b1c8fa8a77bd4562b0d4fb6e', 'after': 'eef431058dd8b91eb6fd15aa6e073a4b2a9d149f03ee70f45ce2a221771f278f'}, 'Hallucination/03_research_log/README.md': {'before': '236023f720257a5ba5b1ab90c07c6e0101a537a6149d16c66f5a9db2744065b7', 'after': 'b6ed855d66132ce5c2148dfa708da1463921ccb004c78e16e9284e66bcab7693'}, 'Hallucination/04_mcot_attention/README.md': {'before': '6172611272516ae25b5a046a43df9833ccffe88151ccdebe54b700c70f2b0b1c', 'after': '3456e114cf9e75573eaea181bef678f236d0362279a32b20210dc464aa8e9569'}, 'Hallucination/05_audio_visual/README.md': {'before': '4092c8f9c7a98f25bab9043af7dbe6c1ce7c7d86467fcd64703d7451962cc944', 'after': '19495575d4c4760cc596b1b2bcd1acb663926da54114171e4f841baa096c4b68'}, 'Hallucination/README.md': {'before': '399eb477d79b192e65a7682ac7f50777f78f9050062c845ac141c37fbf4d99a5', 'after': '9a53b6a312d443d4c76b52ead9feb9d408b2c3d8931fbd512b8158ed79a21546'}, 'Hallucination/experiments/E1_avhbench_attention/README.md': {'before': 'b28b4e4bd45e74325105d402281d7105facb7da1e3c8ff057e3da9be59234a07', 'after': '187928c45067a1196c95a694479cc1ff61a5a1b89310ef7e4196c409c8a24ce2'}, 'Hallucination/experiments/E2_dave_eval/README.md': {'before': '5602fe139c6238c3cc6ffd9923c4e9c9473ca22f260cf1bc63639267312ce571', 'after': '639523addf094c876f4e74905e5a08c9bc7df0d224ccd06ac1a6e60a80e3f2fb'}, 'Hallucination/experiments/README.md': {'before': '2fef086902f80777cb1bab3664b16b401b05f0f2665cdbd4aae29e2c437522e1', 'after': '0d1861bbeeba75412ab6e33feec8c2c8583a874d0c5af40c63ae3dae30a695d7'}, 'README.md': {'before': 'a2dd5e26ea941966910b7763f703a7ad3489ed617dc923de3091425424df37c3', 'after': '3aee9b7e31a89d176fb10a9c2d3461124a05b28d6e2c6630e87a9240a26162b3'}}
+          assert subprocess.check_output(['git','remote','get-url','origin'],text=True).strip().removesuffix('.git').endswith('/heoneyzi/Study')
+          changed=[]
+          for name in subprocess.check_output(['git','ls-files','-z']).decode().split('\0'):
+              if not name or Path(name).suffix.lower()!='.md':continue
+              p=Path(name);before=p.read_bytes();after=clean(before.decode()).encode()
+              if after==before:continue
+              assert name in expected, f'Unreviewed change: {name}'
+              assert hashlib.sha256(before).hexdigest()==expected[name]['before'], f'Source changed: {name}'
+              assert hashlib.sha256(after).hexdigest()==expected[name]['after'], f'Unexpected result: {name}'
+              p.write_bytes(after);changed.append(name)
+          assert set(changed)==set(expected), 'Expected changes missing'
+          subprocess.run(['git','config','user.name','github-actions[bot]'],check=True)
+          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
+          subprocess.run(['git','add','--',*changed],check=True)
+          subprocess.run(['git','commit','-m','Remove Korean summary sections from Markdown documentation'],check=True)
+          subprocess.run(['git','push','origin','HEAD:main'],check=True)
+          print('Removed Korean summary sections from',len(changed),'Markdown files.')
+          PYCODE
